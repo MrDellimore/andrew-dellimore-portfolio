@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h1 class="name">Andrew Dellimore</h1>
+    <h1 class="name">Andrew<br class="mobile-break"> Dellimore</h1>
     <p class="quote">"There is a tide in the affairs of men. If taken at the flood leads on to fortune, ommitted and all the journies of life are bound to shallows and flats. On these kind seas we lay afloat we must take the tide as it serves us."</p>
   </div>
 </template>
@@ -9,6 +9,8 @@
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -26,10 +28,22 @@
 }
 
 .name {
+  font-family: 'Prompt', sans-serif;
   font-size: clamp(3rem, 8vw, 7rem);
   color: #f0f0f0;
   font-weight: 700;
   letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-break {
+    display: block;
+  }
 }
 
 .quote {
