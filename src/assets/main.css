@@ -1,0 +1,66 @@
+/* ======================================
+   GLOBAL STYLE — Light Theme Portfolio
+   ====================================== */
+
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --accent: #0d6efd;
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg);
+  color: #222;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section layout */
+.section {
+  padding: 80px 0;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
+/* Scroll reveal (used by IntersectionObserver in App.vue) */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.inview {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Reusable card look */
+.project-card {
+  background: var(--card);
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: none;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(20, 20, 20, 0.08);
+}
+
+/* Navbar adjustments for fixed layout */
+body {
+  scroll-behavior: smooth;
+  padding-top: 70px; /* Prevent overlap with fixed navbar */
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #dee2e6;
+  background: #fff;
+}
