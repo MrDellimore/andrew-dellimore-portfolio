@@ -1,0 +1,61 @@
+/* ======================================
+   DESIGN TOKENS
+   "A portfolio that rises and falls with the actual tide."
+   Deep, cold palette with one warm signal (channel-marker orange).
+   ====================================== */
+
+:root {
+  /* -- fonts -- */
+  --font-serif: 'Bodoni Moda', Georgia, serif;
+  --font-sans: Archivo, Helvetica, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* -- surface -- */
+  --c-page-bg: oklch(0.94 0.012 84);
+
+  /* -- ink (text) -- */
+  --c-ink: oklch(0.24 0.032 252);
+  --c-heading: oklch(0.24 0.032 252);
+  --c-body: oklch(0.32 0.026 252);
+  --c-body-strong: oklch(0.26 0.03 252);
+  --c-body-soft: oklch(0.30 0.028 252);
+  --c-eyebrow: oklch(0.50 0.024 152);
+  --c-technical: oklch(0.38 0.022 252);
+  --c-footnote: oklch(0.42 0.02 252);
+
+  /* -- accent: channel-marker orange -- */
+  --c-accent: oklch(0.44 0.13 44);
+  --c-accent-hover: oklch(0.42 0.13 45);
+  --c-accent-border: oklch(0.50 0.14 45 / 0.35);
+  --c-accent-border-hover: oklch(0.42 0.13 45 / 0.8);
+
+  /* -- highlight (active/near) -- */
+  --c-highlight: oklch(0.86 0.09 62);
+
+  /* -- selection -- */
+  --c-selection: oklch(0.63 0.16 47 / 0.22);
+
+  /* -- bottom status bar (over the swash / dark water) -- */
+  --c-bar-bg: oklch(0.19 0.075 250 / 0.78);
+  --c-bar-bg-grad: oklch(0.26 0.09 248 / 0.4);
+  --c-bar-readout: oklch(0.97 0.008 84);
+  --c-bar-note: oklch(0.85 0.02 152);
+
+  /* -- nav rail -- */
+  --c-nav-mark-off: oklch(0.50 0.024 152 / 0.35);
+  --c-island-ordinal: oklch(0.62 0.02 200);
+
+  /* -- kumiko texture -- */
+  --c-kumiko-line: oklch(0.50 0.024 152 / 0.16);
+
+  /* -- glow behind hero text (readability over submerged water) -- */
+  --c-glow: oklch(0.96 0.012 84);
+
+  /* -- swash canvas -- */
+  --swash-hue: 214;
+  --swash-sat: 20;
+
+  /* -- layout -- */
+  --page-pad-x: clamp(24px, 7vw, 132px);
+  --content-max: 1180px;
+}
