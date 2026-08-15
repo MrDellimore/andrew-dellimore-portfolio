@@ -4,6 +4,7 @@ import SerifHeading from '@/components/atoms/SerifHeading.vue'
 import EmailLink from '@/components/atoms/EmailLink.vue'
 import ClosingBeat from '@/components/molecules/ClosingBeat.vue'
 import MaintainList from '@/components/molecules/MaintainList.vue'
+import RealWaterline from '@/components/molecules/RealWaterline.vue'
 import { AFLOAT } from '@/data/content'
 import { useWaterlineState } from '@/composables/useWaterline'
 
@@ -35,6 +36,8 @@ const { pageEndPad } = useWaterlineState()
       <EmailLink :email="AFLOAT.email" />
       <div class="afloat__footer-note">{{ AFLOAT.footer }}</div>
     </div>
+
+    <RealWaterline />
   </section>
 </template>
 
