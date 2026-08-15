@@ -77,8 +77,6 @@ export const VENTURES = {
       stamp: 'Built in Kuala Lumpur, and in farm sheds up-country',
       title: 'LocalPasar',
       body: "A venture-backed B2B agricultural marketplace supplying Michelin-star kitchens, where the catalogue doesn't exist until someone harvests it. WhatsApp is where the orders actually arrived, so the order desk moved into WhatsApp. A CRM over 150+ farms ranked candidate growers by distance, because for a depreciating asset proximity is freshness and margin at once. I built eighty to ninety per cent of the platform.",
-      featured: true,
-      imageCaption: 'the unified WhatsApp inbox',
       underTheHood: [
         'Cloud — AWS primary, GCP in parallel against credits',
         'Frontend — Vue.js, static assets on S3 via CDN; product pages compiled to static at the edge',
