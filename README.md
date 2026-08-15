@@ -1,37 +1,29 @@
-# portfolio
+# Andrew Dellimore — Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+My personal site: [andrewdellimore.com](https://andrewdellimore.com). One long page, built around a single quote — "There is a tide in the affairs of men..." — with each section named after a line of it: **the Tide** (hero), **the Flood** (career pivots), **to Fortune** (project highlights), **to Shallows** (what didn't work), and **the Tide** again (where things stand now).
 
-## Recommended IDE Setup
+The waterline itself is real: it's driven by live NOAA tide predictions for The Battery, New York, and rises and falls across the page as you scroll.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Stack
 
-## Recommended Browser Setup
+- [Vue 3](https://vuejs.org/) + [Vite](https://vite.dev/), no UI framework or CSS library
+- Plain CSS with design tokens (`src/assets/tokens.css`) for type, color, and spacing
+- Components organized atoms → molecules → organisms
+- Deployed on push to `main` via GitHub Actions to S3 + CloudFront (`.github/workflows/deploy.yml`)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Project setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Production build
 
 ```sh
 npm run build
