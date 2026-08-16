@@ -1,8 +1,8 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useWaterlineState } from '@/composables/useWaterline'
 
-const { tide, setBarHeight } = useWaterlineState()
+const { tide, setBarHeight, scroll } = useWaterlineState()
 
 const barEl = ref(null)
 let ro
@@ -15,10 +15,12 @@ onMounted(() => {
   ro.observe(barEl.value)
 })
 onBeforeUnmount(() => ro?.disconnect())
+
+const atBottom = computed(() => scroll.progress >= 0.99)
 </script>
 
 <template>
-  <div ref="barEl" class="tide-bar">
+  <div ref="barEl" class="tide-bar" :class="{ 'tide-bar--visible': atBottom }">
     <div class="tide-bar__readout">
       <div class="tide-bar__line">{{ tide.readout }}</div>
       <div class="tide-bar__note">{{ tide.note }}</div>
@@ -41,6 +43,12 @@ onBeforeUnmount(() => ro?.disconnect())
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   background-image: linear-gradient(to top, oklch(0.19 0.075 250 / 0) 0px, var(--c-bar-bg-grad));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tide-bar--visible {
+  opacity: 1;
 }
 
 .tide-bar__readout {
